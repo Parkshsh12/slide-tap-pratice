@@ -1,52 +1,50 @@
-*{margin: 0;padding: 0;}
-ul, li{list-style: none;}
+*{margin: 0px; padding: 0px;}
+ul,li{list-style: none;}
 
 .slide{
-    max-width: 800px;
-    max-height: 700px;
-    margin: 100px auto;
+    max-width: 600px;
+    margin: 200px auto;
     position: relative;
 }
 .slide > input{
     display: none;
 }
 .slide > .slide-list{
+    background-color: blue;
     white-space: nowrap;
-    overflow: hidden;
     font-size: 0;
+    overflow: hidden;
     position: relative;
 }
 .slide > .slide-list > .slide-item{
-    width: 100%;
-    background-color: black;
     display: inline-block;
+    position: relative;
+    width: 100%;
     transition: all 1s;
 }
-.slide > .slide-list > .slide-item > a{
+.slide> .slide-list > .slide-item > a{
     display: block;
     width: 80%;
-    margin: 10%;
+    margin: 20px auto;
 }
-.slide > .slide-list > .slide-item > a > img{
+.slide> .slide-list > .slide-item > a > img{
     max-width: 100%;
 }
 .slide > .slide-control > .control > label{
     position: absolute;
-    color: white;
     top: 50%;
     transform: translateY(-50%);
-    padding: 20px;
+    padding: 5px;
     cursor: pointer;
 }
 
 .slide > .slide-control > .control > .left{
-    left: 2%;
-    background: red url('../images/left-arrow.png') center center / 50% no-repeat;
+    left: 4%;
+    background: black url('../images/left-arrow.png') center center / 80% no-repeat;
 }
-
 .slide > .slide-control > .control > .right{
-    right: 2%;
-    background: red url('../images/right-arrow.png') center center / 50% no-repeat;
+    right: 4%;
+    background: black url('../images/right-arrow.png') center center / 80% no-repeat;
 }
 
 .slide > #slide1:checked ~ .slide-list > .slide-item{
@@ -58,23 +56,12 @@ ul, li{list-style: none;}
 .slide > #slide3:checked ~ .slide-list > .slide-item{
     transform: translateX(-200%);
 }
-.slide > #slide4:checked ~ .slide-list > .slide-item{
-    transform: translateX(-300%);
-}
 
 .slide > .slide-control > .control{
     display: none;
 }
-
-.slide > #slide1:checked ~ .slide-control > .control-1{
-    display: block;
-}
-.slide > #slide2:checked ~ .slide-control > .control-2{
-    display: block;
-}
-.slide > #slide3:checked ~ .slide-control > .control-3{
-    display: block;
-}
-.slide > #slide4:checked ~ .slide-control > .control-4{
+.slide > #slide1:checked ~ .slide-control > .control1,
+.slide > #slide2:checked ~ .slide-control > .control2,
+.slide > #slide3:checked ~ .slide-control > .control3{
     display: block;
 }
