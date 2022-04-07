@@ -1,0 +1,23 @@
+*{margin: 0; padding: 0;}
+.tap{
+    max-width: 800px;
+    margin: 200px auto;
+}
+.tap > .tap-wrap{
+    background-color: cadetblue;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+
+.tap > input{
+    display: none;
+}
+.tap > .tap-wrap > .item{
+    display: none;
+}
+.tap > #tap1:checked ~ .tap-wrap > .tap-item1,
+.tap > #tap2:checked ~ .tap-wrap > .tap-item2,
+.tap > #tap3:checked ~ .tap-wrap > .tap-item3{
+    display: block;
+}
