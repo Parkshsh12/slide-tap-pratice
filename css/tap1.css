@@ -1,0 +1,53 @@
+*{margin: 0;padding: 0;}
+.tap{
+    max-width: 600px;
+    height: 600px;
+    margin: 100px auto;
+}
+.tap > input{
+    display: none;
+}
+.tap > .tap-nav{
+    background-color: red;
+}
+.tap > .tap-nav > label{
+    background-color: blue;
+}
+.tap > .tap-list{
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    position: relative;
+
+}
+.tap > .tap-list >.item{
+    display: none;
+    width: 80%;
+    height: 80%;
+}
+.tap > #tap1:checked ~ .tap-list > .tap-item1{
+    display: block;
+    background-color: cadetblue;
+}
+.tap > #tap2:checked ~ .tap-list > .tap-item2{
+    display: block;
+    background-color: green;
+}
+.tap > #tap3:checked ~ .tap-list > .tap-item3{
+    display: block;
+    background-color: chocolate;
+}
+
+.tap > #tap1:checked ~ .tap-list > .tap-item1 > div{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    background-color: aliceblue;
+}
+.tap > #tap3:checked ~ .tap-nav > .tap3,
+.tap > #tap1:checked ~ .tap-nav > .tap1,
+.tap > #tap2:checked ~ .tap-nav > .tap2{
+    background-color: aliceblue;
+}
