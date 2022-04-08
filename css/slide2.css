@@ -1,0 +1,68 @@
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+
+.slide{
+    max-width: 800px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.slide-list{
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0;
+    position: relative;
+}
+.slide > .slide-list > .slide-item{
+    display: inline-block;
+    width: 100%;
+    background-color: black;
+    transition: all 1s;
+}
+
+.slide > .slide-list > .slide-item > a{
+    display: block;
+    width: 80%;
+}
+.slide > .slide-list > .slide-item > a > img{
+    max-width: 100%;
+}
+.slide > .slide-control > .control > label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.slide > .slide-control > .control > .left{
+    left: 1%;
+    background: red url('../images/left-arrow.png') center center / 50% no-repeat;
+}
+.slide > .slide-control > .control > .right{
+    right: 1%;
+    background: red url('../images/right-arrow.png') center center / 50% no-repeat;
+}
+
+.slide > #slide1:checked ~ .slide-list > .slide-item{
+    transform: translateX(0);
+}
+.slide > #slide2:checked ~ .slide-list > .slide-item{
+    transform: translateX(-100%);
+}
+.slide > #slide3:checked ~ .slide-list > .slide-item{
+    transform: translateX(-200%);
+}
+
+.slide > input{
+    display: none;
+}
+.slide > .slide-control > div{
+    display: none;
+}
+
+.slide > #slide1:checked ~ .slide-control > .control1,
+.slide > #slide2:checked ~ .slide-control > .control2,
+.slide > #slide3:checked ~ .slide-control > .control3{
+    display: block;
+}
